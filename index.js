@@ -30,11 +30,16 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  - counter 1 has a fuction within a function that, that utilzes a local scope. Counter 2 is a function that utilzes a variable in global scope.
+
   2. Which of the two uses a closure? How can you tell?
-  
+  - counter 1 since it creates a function within a function.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?
+     - counter 1 is good if you aren't using the variable outside of the function
+     - counter 2 is good if plan on using the count variable again
+
 */
 
 // counter1 code
@@ -64,8 +69,9 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(ranNum){
+    ranNum = Math.random()*2 + 0;
+    return ranNum;
 }
 
 
@@ -83,8 +89,20 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
+function finalScore(somevar, someNum){
+  let scores = {};
+  let home = 0;
+  let away = 0;
+  function addscore(){
+  for (let i= 0; i < someNum.length; i++){
+    home= home + somevar;
+    away= away + somevar;
+   }
+  }
+   scores.Home= home;
+   scores.Away= away;
+  addscore();
+  return scores;
 }
 
 
@@ -101,9 +119,13 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
-
+function getInningScore(someNum) {
+  let aNum= 0;
+  someNum(aNum);
+  let scores= {};
+  scores.Home = aNum;
+  scores.Away = aNum;
+  return scores;
 }
 
 
