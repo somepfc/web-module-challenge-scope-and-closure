@@ -61,6 +61,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+- a closure is function within a function who's data cannot be accessed from inside to outside of it's scope, but can access data from outside/ surrounding functions.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -81,9 +82,13 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
+a. Where is closure used in this code? How can you tell? 
+- the closure is within the empty function. Data within a closure/ function can't be access from the outside. So for the code to run the entire epmty function had to be returned.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+- name is the same, newRoll would change since its a random number.
+c. What is the lexical scope of `newRoll`?
+- newRoll exists within the empty function, it couldn't be accessed within the personalDice function.
 
 
 ### Task 3 - Stretch Goals
